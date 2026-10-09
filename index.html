@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroNest AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">✦ NeuroNest <span>AI</span></div>
+    <div class="status">● Your AI Study Space</div>
+</header>
+
+<main>
+    <section class="hero">
+        <p class="tag">✦ SMART LEARNING STARTS HERE</p>
+        <h1>Study smarter.<br><span>Dream bigger.</span></h1>
+        <p>Your personal study companion to plan, learn and grow.</p>
+    </section>
+
+    <section class="stats">
+        <div class="stat">
+            <span>📚</span>
+            <p>Study tools</p>
+            <h2>03</h2>
+        </div>
+        <div class="stat">
+            <span>🎯</span>
+            <p>Tasks completed</p>
+            <h2 id="completed">0</h2>
+        </div>
+        <div class="stat">
+            <span>⚡</span>
+            <p>Learning mode</p>
+            <h2>Smart</h2>
+        </div>
+    </section>
+
+    <section class="tools">
+        <h2>Explore your workspace</h2>
+        <p class="subtitle">Choose a tool and start learning.</p>
+
+        <div class="grid">
+            <article class="panel">
+                <div class="tool-icon">🗓️</div>
+                <h3>AI Study Planner</h3>
+                <p>Generate a study plan based on your subject and available time.</p>
+
+                <input id="subject" placeholder="Enter your subject">
+                <input id="hours" type="number" min="1" max="12"
+                    placeholder="Study hours per day">
+
+                <button onclick="makePlan()">Generate Plan ↗</button>
+                <div id="plan" class="result"></div>
+            </article>
+
+            <article class="panel">
+                <div class="tool-icon">📝</div>
+                <h3>Smart Note Summarizer</h3>
+                <p>Turn long notes into a shorter version for revision.</p>
+
+                <textarea id="notes"
+                    placeholder="Paste your study notes here..."></textarea>
+
+                <button onclick="summarize()">Summarize Notes ↗</button>
+                <div id="summary" class="result"></div>
+            </article>
+
+            <article class="panel">
+                <div class="tool-icon">🧠</div>
+                <h3>Quick Knowledge Quiz</h3>
+                <p>Test your knowledge with a random computer science question.</p>
+
+                <div id="question" class="question">
+                    Ready to challenge yourself?
+                </div>
+
+                <div id="answers"></div>
+                <p id="feedback" class="result"></p>
+
+                <button onclick="newQuiz()">New Question ↗</button>
+            </article>
+        </div>
+    </section>
+
+    <section class="motivation">
+        <span>✦ YOUR DAILY REMINDER</span>
+        <h2>Small progress is still progress.</h2>
+        <p>Keep learning. Your future self will thank you.</p>
+        <button onclick="completeTask()">I Studied Today ✓</button>
+        <p id="message"></p>
+    </section>
+</main>
+
+<footer>
+    Made with 💜 and curiosity | NeuroNest AI © 2026
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
